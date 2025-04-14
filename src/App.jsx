@@ -29,6 +29,11 @@ function App() {
         </span>
       </div>
       <div className=" min-h-screen md:p-10 grid  w-fit mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        {data.length === 0 ? (
+          <div className="text-xl text-white">Fetching Data....</div>
+        ) : (
+          ""
+        )}
         {data.map((item, index) => (
           <div
             key={item._id}
